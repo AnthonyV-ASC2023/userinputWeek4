@@ -1,5 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
   const submitButton = document.getElementById("submit_button");
+  const titleInput = document.getElementById("title_input");
+  const mainTitle = document.getElementById("main_title");
+
+  titleInput.addEventListener("input", function () {
+    mainTitle.textContent = titleInput.value.trim();
+  });
+
   submitButton.addEventListener("click", handleSubmit);
 });
 
